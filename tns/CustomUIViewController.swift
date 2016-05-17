@@ -22,7 +22,9 @@ class CustomUIViewController: UIViewController, UICollectionViewDelegateFlowLayo
                 self.logo.image = m.image
                 self.header.colors = m.colors
                 self.titleLabel.text = m.title
+                self.titleLabel.textColor = UIColor.whiteColor()
                 self.descriptionLabel.text = m.description
+                self.descriptionLabel.textColor = UIColor.whiteColor()
             }
         }
     }

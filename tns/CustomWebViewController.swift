@@ -38,6 +38,7 @@ class CustomWebViewController : UIViewController, UIWebViewDelegate {
                 header.colors = p.colors
                 logo.image = p.image
                 titleLabel.text = p.title
+                titleLabel.textColor = UIColor.whiteColor()
                 loadURL(i.url)
             }
         }

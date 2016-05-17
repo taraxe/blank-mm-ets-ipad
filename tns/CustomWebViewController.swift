@@ -48,9 +48,13 @@ class CustomWebViewController : UIViewController, UIWebViewDelegate {
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-        print(error)
+
+        // avoid failure on random site errors, like CORS...
+        guard error?.code == 999 else {
+         return
+        }
         
-        let alert = UIAlertController(title: "Oups", message: "Impossible de charger le document demandé", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Erreur", message: "Impossible de charger le document demandé", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Ressayer", style: UIAlertActionStyle.Default, handler: { _ in
             if let u = self.model?.1.url {

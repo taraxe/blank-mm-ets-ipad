@@ -29,7 +29,6 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>OpenSans-Bold.ttf</string>
 		<string>OpenSans-Light.ttf</string>
 		<string>OpenSans-Regular.ttf</string>
 	</array>
@@ -41,6 +40,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>

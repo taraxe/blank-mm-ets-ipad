@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -32,26 +31,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Header" translatesAutoresizingMaskIntoConstraints="NO" id="zxi-pS-Mze">
-                                <rect key="frame" x="40" y="28" width="485" height="74"/>
+                                <rect key="frame" x="40" y="28" width="242" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="JJS-dY-l6t"/>
-                                    <constraint firstAttribute="width" constant="485" id="TFi-3z-Fkq"/>
+                                    <constraint firstAttribute="height" constant="37" id="JJS-dY-l6t"/>
+                                    <constraint firstAttribute="width" constant="242" id="TFi-3z-Fkq"/>
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOn-VX-eUJ">
-                                <rect key="frame" x="0.0" y="122" width="600" height="380"/>
+                                <rect key="frame" x="0.0" y="85" width="600" height="443"/>
                                 <connections>
                                     <segue destination="CYn-Lb-vMe" kind="embed" identifier="EmbedSegue" id="yHB-a7-rcO"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1Y-JJ-wqK">
-                                <rect key="frame" x="0.0" y="503" width="600" height="97"/>
+                                <rect key="frame" x="0.0" y="529" width="600" height="71"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Footer" translatesAutoresizingMaskIntoConstraints="NO" id="MVs-58-uBH">
-                                        <rect key="frame" x="239" y="17" width="321" height="63"/>
+                                        <rect key="frame" x="400" y="20" width="160" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="63" id="UFV-pA-JoY"/>
-                                            <constraint firstAttribute="width" constant="321" id="hVb-lE-a54"/>
+                                            <constraint firstAttribute="height" constant="31" id="UFV-pA-JoY"/>
+                                            <constraint firstAttribute="width" constant="160" id="hVb-lE-a54"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -59,8 +58,14 @@
                                 <constraints>
                                     <constraint firstItem="MVs-58-uBH" firstAttribute="centerY" secondItem="A1Y-JJ-wqK" secondAttribute="centerY" id="a8E-Y8-3lL"/>
                                     <constraint firstAttribute="bottom" secondItem="MVs-58-uBH" secondAttribute="bottom" constant="17" id="gah-2L-kXB"/>
+                                    <constraint firstItem="MVs-58-uBH" firstAttribute="top" secondItem="A1Y-JJ-wqK" secondAttribute="top" constant="20" id="jSK-rz-ow3"/>
                                     <constraint firstAttribute="trailing" secondItem="MVs-58-uBH" secondAttribute="trailing" constant="40" id="pFg-tI-7oc"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gah-2L-kXB"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -124,24 +129,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="363" height="354"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-zK-JBd">
-                                                    <rect key="frame" x="8" y="8" width="348" height="230"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="3qe-zK-JBd" secondAttribute="height" multiplier="68:45" id="Qst-iD-zQl"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib2-zB-j9b">
-                                                    <rect key="frame" x="8" y="246" width="347" height="25"/>
+                                                    <rect key="frame" x="8" y="128" width="347" height="25"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hz-Dq-fr9">
-                                                    <rect key="frame" x="8" y="279" width="73" height="20"/>
+                                                    <rect key="frame" x="8" y="161" width="73" height="20"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-zK-JBd">
+                                                    <rect key="frame" x="0.0" y="8" width="170" height="112"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="170" id="9G2-r5-xa6"/>
+                                                        <constraint firstAttribute="height" constant="112" id="9Yb-lf-jL2"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -149,12 +155,11 @@
                                         <constraints>
                                             <constraint firstItem="1hz-Dq-fr9" firstAttribute="top" secondItem="ib2-zB-j9b" secondAttribute="bottom" constant="8" symbolic="YES" id="9Sr-I5-iF3"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="ib2-zB-j9b" secondAttribute="trailing" id="BU1-XB-EUO"/>
-                                            <constraint firstItem="3qe-zK-JBd" firstAttribute="centerX" secondItem="0I2-gA-Yol" secondAttribute="centerX" id="Jvg-ej-bhH"/>
-                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="1hz-Dq-fr9" secondAttribute="bottom" id="Uuv-eo-Q4H"/>
-                                            <constraint firstItem="3qe-zK-JBd" firstAttribute="leading" secondItem="0I2-gA-Yol" secondAttribute="leadingMargin" id="gyS-MA-G22"/>
+                                            <constraint firstItem="3qe-zK-JBd" firstAttribute="leading" secondItem="0I2-gA-Yol" secondAttribute="leadingMargin" constant="-8" id="Ieh-i2-eqT"/>
                                             <constraint firstItem="ib2-zB-j9b" firstAttribute="top" secondItem="3qe-zK-JBd" secondAttribute="bottom" constant="8" symbolic="YES" id="jD2-7k-tBr"/>
                                             <constraint firstItem="1hz-Dq-fr9" firstAttribute="leading" secondItem="0I2-gA-Yol" secondAttribute="leadingMargin" id="kbg-Au-fhw"/>
                                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="1hz-Dq-fr9" secondAttribute="trailing" id="oeW-qS-nIy"/>
+                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="1hz-Dq-fr9" secondAttribute="bottom" id="qf3-yc-gW0"/>
                                             <constraint firstAttribute="topMargin" secondItem="3qe-zK-JBd" secondAttribute="top" id="rgl-Ub-OZO"/>
                                             <constraint firstAttribute="leadingMargin" secondItem="ib2-zB-j9b" secondAttribute="leading" id="zeb-4M-hqH"/>
                                         </constraints>
@@ -174,20 +179,20 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UmE-tw-BaH">
-                                        <rect key="frame" x="50" y="48" width="105" height="105"/>
+                                        <rect key="frame" x="50" y="48" width="52" height="52"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="1Om-Xa-ver"/>
-                                            <constraint firstAttribute="height" constant="105" id="6Rh-bS-3gs"/>
+                                            <constraint firstAttribute="width" constant="52" id="1Om-Xa-ver"/>
+                                            <constraint firstAttribute="height" constant="52" id="6Rh-bS-3gs"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Réduire l'absentéisme dans votre entreprise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Znp-U9-xea">
-                                        <rect key="frame" x="205" y="48" width="345" height="41"/>
+                                        <rect key="frame" x="152" y="48" width="398" height="41"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkA-if-qid">
-                                        <rect key="frame" x="205" y="97" width="341" height="83"/>
+                                        <rect key="frame" x="152" y="97" width="395" height="83"/>
                                         <string key="text">Un programme complet est à votre disposition pour mesurer l’absentéisme maladie au sein de votre entreprise, le comparer à votre secteur d’activité, en connaître le coût, en déterminer les causes, les actions à mettre en place et à en évaluer les résultats.
 
 Pour vos salariés, des solutions d’accompagnement et de prévention sont proposées.</string>
@@ -207,7 +212,7 @@ Pour vos salariés, des solutions d’accompagnement et de prévention sont prop
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MkA-if-qid" secondAttribute="bottom" constant="20" id="Yj8-Ya-yHG"/>
                                     <constraint firstItem="MkA-if-qid" firstAttribute="leading" secondItem="UmE-tw-BaH" secondAttribute="trailing" constant="50" id="Zdz-J1-3kX"/>
                                     <constraint firstItem="UmE-tw-BaH" firstAttribute="leading" secondItem="Z8i-kC-zYm" secondAttribute="leading" constant="50" id="jDE-j3-apO"/>
-                                    <constraint firstItem="UmE-tw-BaH" firstAttribute="centerY" secondItem="Z8i-kC-zYm" secondAttribute="centerY" id="sIJ-J7-1kF"/>
+                                    <constraint firstItem="UmE-tw-BaH" firstAttribute="centerY" secondItem="Z8i-kC-zYm" secondAttribute="centerY" constant="-26" id="sIJ-J7-1kF"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -259,23 +264,23 @@ Pour vos salariés, des solutions d’accompagnement et de prévention sont prop
                                 <rect key="frame" x="0.0" y="20" width="600" height="120"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-Ef-YTz">
-                                        <rect key="frame" x="50" y="8" width="105" height="105"/>
+                                        <rect key="frame" x="50" y="8" width="52" height="52"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="No4-YR-4Lt"/>
-                                            <constraint firstAttribute="height" constant="105" id="cTV-jp-Ny6"/>
+                                            <constraint firstAttribute="width" constant="52" id="No4-YR-4Lt"/>
+                                            <constraint firstAttribute="height" constant="52" id="cTV-jp-Ny6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Réduire l'absentéisme dans votre entreprise" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwQ-jB-8oe">
-                                        <rect key="frame" x="205" y="8" width="177" height="82"/>
+                                        <rect key="frame" x="152" y="8" width="284" height="82"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="P3P-ac-jDP">
-                                        <rect key="frame" x="432" y="8" width="108" height="108"/>
+                                        <rect key="frame" x="486" y="8" width="54" height="54"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="108" id="8GE-RT-vyw"/>
-                                            <constraint firstAttribute="width" constant="108" id="IGV-I4-k5B"/>
+                                            <constraint firstAttribute="height" constant="54" id="8GE-RT-vyw"/>
+                                            <constraint firstAttribute="width" constant="54" id="IGV-I4-k5B"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -287,7 +292,7 @@ Pour vos salariés, des solutions d’accompagnement et de prévention sont prop
                                     <constraint firstAttribute="trailing" secondItem="P3P-ac-jDP" secondAttribute="trailing" constant="60" id="VR4-BE-g79"/>
                                     <constraint firstItem="P3P-ac-jDP" firstAttribute="leading" secondItem="OwQ-jB-8oe" secondAttribute="trailing" constant="50" id="c72-0b-RNZ"/>
                                     <constraint firstItem="UTt-Ef-YTz" firstAttribute="leading" secondItem="JEx-tT-Xtt" secondAttribute="leading" constant="50" id="ffg-5B-tsG"/>
-                                    <constraint firstItem="UTt-Ef-YTz" firstAttribute="centerY" secondItem="JEx-tT-Xtt" secondAttribute="centerY" id="knA-Jo-o4E"/>
+                                    <constraint firstItem="UTt-Ef-YTz" firstAttribute="centerY" secondItem="JEx-tT-Xtt" secondAttribute="centerY" constant="-26" id="knA-Jo-o4E"/>
                                 </constraints>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="C4O-VX-flB">

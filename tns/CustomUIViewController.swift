@@ -27,6 +27,7 @@ class CustomUIViewController: UIViewController, UICollectionViewDelegateFlowLayo
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.content.delegate = self
@@ -46,16 +47,19 @@ class CustomUIViewController: UIViewController, UICollectionViewDelegateFlowLayo
         return cell
     }
     
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let dividedBy = CGFloat(5) //CGFloat((model?.items.count).or(1))
-        let colDimension = (self.content.frame.size.width / dividedBy)
-        return CGSizeMake(colDimension, self.content.frame.size.height)
+        return CGSizeMake(self.fixedCellWidth(), self.content.frame.size.height)
     }
     
-    func collectionView(collectionView: UICollectionView, collectionViewLayout: UICollectionViewLayout, section: Int) -> UIEdgeInsets {
+    func fixedCellWidth() -> CGFloat {
+        return floor((self.content.frame.size.width / CGFloat(5)))
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         let flowLayout = (collectionViewLayout as! UICollectionViewFlowLayout)
         let cellSpacing = flowLayout.minimumInteritemSpacing
-        let cellWidth = flowLayout.itemSize.width
+        let cellWidth = fixedCellWidth()
         let cellCount = CGFloat(collectionView.numberOfItemsInSection(section))
         let collectionViewWidth = collectionView.bounds.size.width
         let totalCellWidth = cellCount * cellWidth
@@ -63,7 +67,6 @@ class CustomUIViewController: UIViewController, UICollectionViewDelegateFlowLayo
         let totalCellsWidth = totalCellWidth + totalCellSpacing
         let edgeInsets = (collectionViewWidth - totalCellsWidth) / 2.0
         return edgeInsets > 0 ? UIEdgeInsetsMake(0, edgeInsets, 0, edgeInsets) : UIEdgeInsetsMake(0, cellSpacing, 0, cellSpacing)
-        // TODO debug this shit
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {

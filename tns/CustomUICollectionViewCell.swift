@@ -14,14 +14,12 @@ class CustomUICollectionViewCell : UICollectionViewCell {
     
     @IBOutlet weak var subtitle: UILabel!
     @IBOutlet weak var text: UILabel!
-    
-    // TODO wire the good image
-    let defaultImage = UIImage(data: NSData(contentsOfURL: NSURL(string: "https://placehold.it/350x250")!)!)!
+
     
     var model:(AppPage,PageItem)? = nil {
         didSet {
             if let (p,m) = model {
-                self.image.image = m.image ?? defaultImage
+                self.image.image = m.image
                 self.subtitle.text = m.subtitle
                 self.text.text = m.description
                 let c = p.colors[0]

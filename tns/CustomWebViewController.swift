@@ -37,6 +37,11 @@ class CustomWebViewController : UIViewController, UIWebViewDelegate {
             if let (p,i) = model {
                 header.colors = p.colors
                 logo.image = p.image
+//                let paragraphStyle = NSMutableParagraphStyle()
+//                paragraphStyle.lineSpacing = 0
+//                let attributedString = NSMutableAttributedString(string: p.title)
+//                attributedString.addAttribute(NSParagraphStyleAttributeName, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+//                titleLabel.attributedText = attributedString;
                 titleLabel.text = p.title
                 titleLabel.textColor = UIColor.whiteColor()
                 loadURL(i.url)

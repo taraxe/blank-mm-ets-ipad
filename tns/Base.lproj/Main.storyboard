@@ -110,10 +110,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RFB-I1-263">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RFB-I1-263">
                                 <rect key="frame" x="20" y="241" width="560" height="359"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="D8C-fQ-oFi">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="D8C-fQ-oFi">
                                     <size key="itemSize" width="0.0" height="0.0"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -128,19 +128,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sous titre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib2-zB-j9b">
-                                                    <rect key="frame" x="8" y="130" width="170" height="21"/>
+                                                    <rect key="frame" x="0.0" y="130" width="170" height="21"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hz-Dq-fr9">
-                                                    <rect key="frame" x="8" y="161" width="170" height="15"/>
+                                                    <rect key="frame" x="0.0" y="161" width="170" height="15"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qe-zK-JBd">
-                                                    <rect key="frame" x="8" y="8" width="170" height="112"/>
+                                                    <rect key="frame" x="0.0" y="8" width="170" height="112"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="170" id="9G2-r5-xa6"/>
                                                         <constraint firstAttribute="height" constant="112" id="9Yb-lf-jL2"/>
@@ -153,14 +153,14 @@
                                         <constraints>
                                             <constraint firstItem="1hz-Dq-fr9" firstAttribute="top" secondItem="ib2-zB-j9b" secondAttribute="bottom" constant="10" id="9Sr-I5-iF3"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="ib2-zB-j9b" secondAttribute="trailing" id="BU1-XB-EUO"/>
-                                            <constraint firstItem="3qe-zK-JBd" firstAttribute="leading" secondItem="0I2-gA-Yol" secondAttribute="leadingMargin" id="Ieh-i2-eqT"/>
+                                            <constraint firstItem="3qe-zK-JBd" firstAttribute="centerX" secondItem="0I2-gA-Yol" secondAttribute="centerX" id="LlZ-A4-kQJ"/>
                                             <constraint firstItem="ib2-zB-j9b" firstAttribute="width" secondItem="3qe-zK-JBd" secondAttribute="width" id="Unk-81-XIh"/>
+                                            <constraint firstItem="ib2-zB-j9b" firstAttribute="centerX" secondItem="0I2-gA-Yol" secondAttribute="centerX" id="YiL-TZ-X1T"/>
                                             <constraint firstItem="1hz-Dq-fr9" firstAttribute="width" secondItem="ib2-zB-j9b" secondAttribute="width" id="Yww-GR-50k"/>
+                                            <constraint firstItem="1hz-Dq-fr9" firstAttribute="centerX" secondItem="0I2-gA-Yol" secondAttribute="centerX" id="aVH-Ch-iKZ"/>
                                             <constraint firstItem="ib2-zB-j9b" firstAttribute="top" secondItem="3qe-zK-JBd" secondAttribute="bottom" constant="10" id="jD2-7k-tBr"/>
-                                            <constraint firstItem="1hz-Dq-fr9" firstAttribute="leading" secondItem="0I2-gA-Yol" secondAttribute="leadingMargin" id="kbg-Au-fhw"/>
                                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="1hz-Dq-fr9" secondAttribute="bottom" id="qf3-yc-gW0"/>
                                             <constraint firstAttribute="topMargin" secondItem="3qe-zK-JBd" secondAttribute="top" id="rgl-Ub-OZO"/>
-                                            <constraint firstAttribute="leadingMargin" secondItem="ib2-zB-j9b" secondAttribute="leading" id="zeb-4M-hqH"/>
                                         </constraints>
                                         <size key="customSize" width="170" height="319"/>
                                         <variation key="default">

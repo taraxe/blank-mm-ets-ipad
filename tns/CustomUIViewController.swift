@@ -55,7 +55,7 @@ class CustomUIViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     func fixedCellWidth() -> CGFloat {
-        return floor((self.content.frame.size.width / CGFloat(5)))
+        return (self.content.frame.size.width / CGFloat(5))
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {

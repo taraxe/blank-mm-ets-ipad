@@ -74,7 +74,11 @@ class CustomUIPageViewController: UIPageViewController, UIPageViewControllerData
 
     
     func toggleNavigation(animated:Bool) {
-        self.view.userInteractionEnabled = !self.view.userInteractionEnabled
+        for view in self.view.subviews {
+            if let subView = view as? UIScrollView {
+                subView.scrollEnabled = !subView.scrollEnabled
+            }
+        }
     }
 }
 

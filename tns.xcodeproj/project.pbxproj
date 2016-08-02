@@ -155,7 +155,7 @@
 				TargetAttributes = {
 					611209871CE20B3000D45880 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8S9UPX2Z9C;
+						DevelopmentTeam = UJF44U565U;
 					};
 				};
 			};
@@ -329,7 +329,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.blank.tns;
+				PRODUCT_BUNDLE_IDENTIFIER = "cc.blank.tns-ipad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -343,7 +343,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tns/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.blank.tns;
+				PRODUCT_BUNDLE_IDENTIFIER = "cc.blank.tns-ipad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -44,7 +44,7 @@ class CustomUIViewController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ScreenItemCell", forIndexPath: indexPath) as! CustomUICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(String(CustomUICollectionViewCell), forIndexPath: indexPath) as! CustomUICollectionViewCell
         cell.model = (model!, (model?.items[indexPath.item])!)
         return cell
     }
